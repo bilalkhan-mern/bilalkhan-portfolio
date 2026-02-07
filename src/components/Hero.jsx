@@ -23,12 +23,12 @@ export default function Hero() {
             >
               View Projects
             </Link>
-            <a
-              href="#"
+            <Link
+              to="/contact"
               className="px-6 py-3 border border-slate-500 hover:border-white rounded-lg font-medium"
             >
               Contact Me
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -36,9 +36,9 @@ export default function Hero() {
         <div className="bg-slate-800/60 backdrop-blur rounded-2xl p-8 shadow-xl">
           <h4 className="text-xl font-semibold mb-4">Quick Info</h4>
           <ul className="space-y-3 text-slate-300">
-            <li>📍 Location: India</li>
+            <li>📍 Location: Ahmedabad, Gujarat</li>
             <li>💼 Role: Full Stack Developer</li>
-            <li>🎓 Experience: 1+ Years</li>
+            <li>🎓 Experience: Fresher </li>
             <li>⚡ Tech: MERN Stack</li>
           </ul>
         </div>

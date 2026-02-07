@@ -47,10 +47,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex gap-5 text-xl text-slate-400">
-              <a href="https://github.com/yourusername" target="_blank" className="hover:text-indigo-400"><FaGithub /></a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" className="hover:text-indigo-400"><FaLinkedin /></a>
-              <a href="https://twitter.com/yourusername" target="_blank" className="hover:text-indigo-400"><FaTwitter /></a>
-              <a href="mailto:bilalkhan@example.com" className="hover:text-indigo-400"><FaEnvelope /></a>
+              <a href="https://github.com/bilalkhan-mern" target="_blank" className="hover:text-indigo-400"><FaGithub /></a>
+              <a href="https://www.linkedin.com/in/bilalkhan-pathan-7258a4252" target="_blank" className="hover:text-indigo-400"><FaLinkedin /></a>
+              <a href="https://twitter.com/bilalkhan8487" target="_blank" className="hover:text-indigo-400"><FaTwitter /></a>
+              <a href="mailto:bilal8511018651@gmail.com" className="hover:text-indigo-400"><FaEnvelope /></a>
             </div>
           </div>
         </div>
