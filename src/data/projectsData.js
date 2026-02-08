@@ -5,7 +5,7 @@ const projectsData = [
     description:
       "A personal portfolio website showcasing skills, projects, and experience.",
     tech: ["React", "Tailwind CSS", "Vite"],
-    github: "https://github.com/bilalkhan-mern/portfolio",
+    github: "https://github.com/bilalkhan-mern/react-portfolio.git",
   },
   {
     id: 2,

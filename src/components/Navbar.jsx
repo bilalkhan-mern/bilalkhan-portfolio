@@ -28,6 +28,11 @@ export default function Navbar() {
       {/* Navigation */}
       <ul className="flex gap-6 text-sm">
         <li>
+          <NavLink to="/" className={navLinkClass}>
+            Home
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/about" className={navLinkClass}>
             About
           </NavLink>
