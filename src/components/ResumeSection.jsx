@@ -1,30 +1,29 @@
-import { FaEye, FaDownload } from "react-icons/fa";
+import { FaDownload, FaEye } from "react-icons/fa";
+import portfolioData from "../data/portfolioData";
 
 export default function ResumeSection() {
   return (
-    <div className="bg-slate-800/60 rounded-2xl p-8 text-center shadow-lg">
-      <h3 className="text-2xl font-bold mb-4">Resume</h3>
-      <p className="text-slate-400 mb-8">
-        View or download my resume to learn more about my experience and skills.
+    <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
+      <h3 className="text-2xl font-bold text-slate-900">Resume</h3>
+      <p className="mt-4 max-w-2xl text-slate-600">
+        View or download your resume so recruiters can quickly check your education, internship, skills, and project experience.
       </p>
 
-      <div className="flex justify-center gap-6">
-        {/* View Resume */}
+      <div className="mt-8 flex flex-wrap gap-4">
         <a
-          href="/BilalLatestResume.pdf"
+          href={portfolioData.personal.resumeLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-6 py-3 border border-slate-500 hover:border-indigo-400 rounded-xl transition"
+          className="inline-flex items-center gap-2 rounded-xl border border-stone-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-amber-500 hover:text-amber-700"
         >
           <FaEye />
           View Resume
         </a>
 
-        {/* Download Resume */}
         <a
-          href="/BilalLatestResume.pdf"
+          href={portfolioData.personal.resumeLink}
           download
-          className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl transition"
+          className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 font-semibold text-white transition hover:bg-amber-700"
         >
           <FaDownload />
           Download Resume

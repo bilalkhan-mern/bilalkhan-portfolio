@@ -1,65 +1,75 @@
-import projectsData from "../data/projectsData";
-import { Link } from "react-router-dom";
-import { FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import portfolioData from "../data/portfolioData";
+import SectionTitle from "../components/SectionTitle";
 
 export default function Projects() {
   return (
-    <section className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-4">Projects</h2>
-        <p className="text-slate-400 mb-12 max-w-2xl">
-          A selection of projects demonstrating my skills in building modern,
-          scalable, and maintainable web applications.
-        </p>
+    <section id="projects" className="bg-white px-6 py-20 sm:py-24">
+      <div className="mx-auto max-w-6xl">
+        <SectionTitle
+          eyebrow="Projects"
+          title="Selected work that shows my skills"
+        />
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projectsData.map((project) => (
-            <div
-              key={project.id}
-              className="bg-slate-800/60 rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.02] transition"
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {portfolioData.projects.map((project) => (
+            <article
+              key={project.title}
+              className="flex h-full flex-col rounded-3xl border border-stone-200 bg-stone-50 p-8 transition hover:-translate-y-1 hover:shadow-lg"
             >
-              {/* Top */}
-              <div>
-                <h3 className="text-xl font-semibold mb-2">
-                  {project.title}
-                </h3>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Featured Project</p>
+              <h3 className="mt-4 text-2xl font-semibold text-slate-900">
+                {project.live ? (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-amber-700"
+                  >
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}
+              </h3>
+              <p className="mt-4 flex-grow leading-7 text-slate-600">{project.description}</p>
 
-                <p className="text-slate-300 mb-4">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-slate-700 rounded-full text-xs"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full bg-white px-3 py-2 text-xs font-semibold text-slate-700 ring-1 ring-stone-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
 
-              {/* Bottom actions */}
-              <div className="flex items-center justify-between">
-                <Link
-                  to={`/projects/${project.id}`}
-                  className="text-indigo-400 hover:text-indigo-300 font-medium"
-                >
-                  View Details →
-                </Link>
-
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-white text-xl"
-                >
-                  <FaGithub />
-                </a>
+              <div className="mt-8 flex flex-wrap items-center gap-5 text-sm font-semibold">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-slate-700 transition hover:text-amber-700"
+                  >
+                    <FaGithub />
+                    GitHub
+                  </a>
+                )}
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-slate-700 transition hover:text-amber-700"
+                  >
+                    <FaExternalLinkAlt />
+                    Live Demo
+                  </a>
+                )}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
