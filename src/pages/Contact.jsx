@@ -17,7 +17,7 @@ export default function Contact() {
 
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="rounded-3xl bg-slate-900 p-8 text-white shadow-lg">
-              <h3 className="text-2xl font-semibold">Let us connect</h3>
+              <h3 className="text-2xl font-semibold">Let's connect</h3>
               <p className="mt-4 leading-7 text-slate-300">
                 I am looking for opportunities where I can contribute, learn, and grow as a React developer.
               </p>
@@ -91,3 +91,4 @@ export default function Contact() {
     </section>
   );
 }
+

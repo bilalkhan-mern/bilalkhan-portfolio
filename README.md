@@ -1,56 +1,41 @@
-# 🚀 Personal Portfolio Website
+# React Portfolio
 
-A modern, responsive, and professional **portfolio website** built using **React**, **Vite**, and **Tailwind CSS**.  
-This portfolio showcases my skills, projects, resume, and contact information with a clean UI and smooth user experience.
+A personal portfolio website built with React, Vite, and Tailwind CSS to showcase profile details, internship experience, skills, projects, education, certification, resume, and contact links.
 
----
+## Tech Stack
 
-## 🛠️ Tech Stack
+- React
+- Vite
+- Tailwind CSS
+- React Icons
 
-- **Frontend:** React.js
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS
-- **Routing:** React Router DOM
-- **Icons:** React Icons
-- **Version Control:** Git & GitHub
+## Features
 
----
+- Clean single-page portfolio layout
+- Responsive design for mobile, tablet, and desktop
+- Internship, education, certification, and project sections
+- Resume view and download
+- GitHub, LinkedIn, email, and live project links
+- Simple component-based React structure
 
-## ✨ Features
+## Run Locally
 
-- Responsive design (mobile, tablet, desktop)
-- Professional UI with modern color scheme
-- Smooth navigation using React Router
-- Dedicated pages:
-  - Home
-  - About
-  - Skills
-  - Projects
-  - Project Details
-  - Contact
-- Resume **view & download**
-- Social media links (GitHub, LinkedIn, etc.)
-- Clean and maintainable component-based structure
+```bash
+npm install
+npm run dev
+```
 
----
+## Build
 
-## 📂 Project Structure
+```bash
+npm run build
+```
 
-src/
-│── components/
-│ ├── Navbar.jsx
-│ ├── Footer.jsx
-│ ├── Hero.jsx
-│ ├── Skills.jsx
-│ ├── Projects.jsx
-│ ├── ProjectDetails.jsx
-│ ├── Contact.jsx
-│ └── ResumeSection.jsx
-│
-│── assets/
-│ └── Logo.png
-│
-│── App.jsx
-│── main.jsx
-│── index.css
+## Netlify Deployment
 
+This project is ready for Netlify.
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+You can deploy it by importing the GitHub repository into Netlify.
