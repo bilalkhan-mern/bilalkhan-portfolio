@@ -14,7 +14,7 @@ export default function ResumeSection() {
           href={portfolioData.personal.resumeLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-xl border border-stone-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-amber-500 hover:text-amber-700"
+          className="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-slate-950 hover:text-slate-950"
         >
           <FaEye />
           View Resume
@@ -23,7 +23,7 @@ export default function ResumeSection() {
         <a
           href={portfolioData.personal.resumeLink}
           download
-          className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 font-semibold text-white transition hover:bg-amber-700"
+          className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3 font-semibold text-white transition hover:bg-slate-800"
         >
           <FaDownload />
           Download Resume

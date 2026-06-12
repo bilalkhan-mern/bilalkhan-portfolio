@@ -1,6 +1,22 @@
-# React Portfolio
+# Bilal Khan Pathan | Portfolio
 
-A personal portfolio website built with React, Vite, and Tailwind CSS to showcase profile details, internship experience, skills, projects, education, certification, resume, and contact links.
+Professional React portfolio for Bilal Khan Pathan, a MERN Stack fresher and MCA student. The site highlights the resume-based profile, projects, technical skills, and direct contact links in a clean single-page experience.
+
+## Overview
+
+- Built with React, Vite, and Tailwind CSS
+- Responsive layout for mobile, tablet, and desktop
+- Resume download button and direct contact links
+- Data-driven sections for easier maintenance
+- Monochrome visual style with smooth motion and transitions
+
+## Highlights
+
+- Strong hero section with clear positioning
+- Skills grouped by frontend, backend, tools, and databases
+- Project cards with impact points and tech tags
+- Professional contact section with email, phone, GitHub, and LinkedIn
+- Optimized structure for simpler updates
 
 ## Tech Stack
 
@@ -9,33 +25,35 @@ A personal portfolio website built with React, Vite, and Tailwind CSS to showcas
 - Tailwind CSS
 - React Icons
 
-## Features
-
-- Clean single-page portfolio layout
-- Responsive design for mobile, tablet, and desktop
-- Internship, education, certification, and project sections
-- Resume view and download
-- GitHub, LinkedIn, email, and live project links
-- Simple component-based React structure
-
-## Run Locally
+## Local Setup
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+## Production Build
 
 ```bash
 npm run build
 ```
 
-## Netlify Deployment
+## Project Structure
 
-This project is ready for Netlify.
+- `src/components` for reusable UI pieces
+- `src/pages` for section content blocks
+- `src/data/portfolioData.js` for content and links
+- `public/Bilal-Resume.pdf` for the downloadable resume
+
+## Deployment
+
+This project can be deployed on Netlify or any static hosting provider.
 
 - Build command: `npm run build`
 - Publish directory: `dist`
 
-You can deploy it by importing the GitHub repository into Netlify.
+## Contact
+
+- GitHub: [bilalkhan-mern](https://github.com/bilalkhan-mern)
+- LinkedIn: [Bilal Khan Pathan](https://www.linkedin.com/in/bilalkhan-pathan-7258a4252)
+- Email: `bilal8511018651@gmail.com`

@@ -1,134 +1,195 @@
+import {
+  FaArrowRight,
+  FaCode,
+  FaDatabase,
+  FaDownload,
+  FaEnvelope,
+  FaGitAlt,
+  FaGithub,
+  FaHtml5,
+  FaJs,
+  FaLaptopCode,
+  FaLinkedinIn,
+  FaNodeJs,
+  FaPhone,
+  FaReact,
+  FaServer,
+  FaShieldHalved,
+  FaLocationDot,
+  FaArrowUpRightFromSquare,
+} from "react-icons/fa6";
+import {
+  SiExpress,
+  SiMongodb,
+  SiMongoose,
+  SiMysql,
+  SiNetlify,
+  SiNpm,
+  SiPostman,
+  SiTailwindcss,
+  SiVite,
+} from "react-icons/si";
+
 const portfolioData = {
   personal: {
     name: "Bilal Khan Pathan",
     title: "MERN Stack Developer",
+    subtitle: "MCA Student and Full-Stack Fresher",
     shortIntro:
-      "I build responsive and user-friendly web applications using React, Node.js, Express, MongoDB, JavaScript, and Tailwind CSS.",
+      "I build modern, responsive web applications with React, Node.js, Express, MongoDB, JavaScript, and Tailwind CSS.",
     longIntro:
-      "I am a MERN Stack fresher with hands-on experience in building responsive web applications, RESTful APIs, and maintainable full-stack solutions. I enjoy writing clear code, building clean interfaces, and improving through practical project work and internship experience.",
+      "I am an adaptable MERN Stack fresher and MCA student focused on building clean, practical, and user-friendly digital experiences. I enjoy turning ideas into responsive interfaces, reliable APIs, and full-stack projects that are simple to use and easy to maintain.",
+    objective:
+      "Adaptable MERN Stack Developer passionate about building modern, user-friendly web applications. Skilled in RESTful APIs and database management, looking to contribute strong problem-solving abilities and a fast-learning mindset to an innovative tech team.",
+    resumeLink: "/Bilal-Resume.pdf",
+    availability: "Open to internships, junior developer roles, and freelance opportunities",
     location: "Ahmedabad, Gujarat",
     email: "bilal8511018651@gmail.com",
     phone: "+91 84878 79887",
-    availability: "Open to internships, junior developer roles, and freelance work",
-    resumeLink: "/Bilal-Resume.pdf",
   },
-  stats: [
-    { label: "Projects Completed", value: "4+" },
-    { label: "Core Stack", value: "MERN Stack" },
-    { label: "Focus", value: "Responsive Web Apps" },
+  heroStats: [
+    { label: "Projects", value: "4+" },
+    { label: "Core Stack", value: "MERN" },
+    { label: "Focus", value: "Responsive UI" },
   ],
-  highlights: [
-    "Responsive website design",
-    "Clean component-based React code",
-    "REST API integration",
-    "Role-based full-stack projects",
+  heroHighlights: [
+    "Clean React component architecture",
+    "REST APIs with smooth frontend integration",
+    "Mobile-first layouts using Tailwind CSS",
+    "Ready for internship and junior roles",
+  ],
+  aboutPoints: [
+    "MCA student building practical full-stack projects with a strong focus on frontend polish.",
+    "Comfortable with component-driven development, reusable UI, and API integration.",
+    "Interested in frontend engineering, backend logic, and learning production-ready workflows.",
   ],
   skills: [
     {
       title: "Frontend",
-      items: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Tailwind CSS", "Responsive Web Design"],
+      icon: FaLaptopCode,
+      description: "Interfaces, interactions, and responsive layouts.",
+      items: [
+        { name: "HTML5", icon: FaHtml5 },
+        { name: "CSS3", icon: FaCode },
+        { name: "JavaScript", icon: FaJs },
+        { name: "React", icon: FaReact },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+        { name: "Vite", icon: SiVite },
+      ],
     },
     {
       title: "Backend",
-      items: ["Node.js", "Express.js", "RESTful APIs", "JWT Authentication", "MVC Architecture"],
-    },
-    {
-      title: "Database and Tools",
-      items: ["MongoDB", "Mongoose ODM", "MySQL", "Git", "GitHub", "Postman", "VS Code", "NPM"],
-    },
-    {
-      title: "Additional Skills",
-      items: ["API Integration", "Error Handling and Debugging", "Environment Variables", "Deployment with Render, Vercel and Netlify"],
-    },
-  ],
-  internship: [
-    {
-      company: "Grras IT Solutions",
-      role: "Full Stack Developer Trainee",
-      duration: "Oct 2025 - Apr 2026",
-      details: [
-        "Engineered 5+ responsive and mobile-friendly web features, improving user experience across devices.",
-        "Designed and implemented RESTful APIs for efficient frontend and backend communication.",
-        "Diagnosed and resolved performance bottlenecks to improve application speed and reliability.",
-        "Applied best coding practices to build scalable, maintainable, and high-performance applications.",
+      icon: FaServer,
+      description: "APIs, server logic, and authentication.",
+      items: [
+        { name: "Node.js", icon: FaNodeJs },
+        { name: "Express.js", icon: SiExpress },
+        { name: "MongoDB", icon: SiMongodb },
+        { name: "Mongoose", icon: SiMongoose },
+        { name: "JWT Auth", icon: FaShieldHalved },
       ],
     },
     {
-      company: "IBM",
-      role: "Frontend Developer Intern",
-      duration: "Jun 2025 - Aug 2025",
-      details: [
-        "Developed modular React components to improve interface consistency and reusability.",
-        "Translated UI and UX mockups into responsive and adaptive web interfaces.",
-        "Enhanced user experience by building efficient and scalable front-end structures.",
-        "Delivered clean and maintainable code by following modern frontend best practices.",
+      title: "Tools",
+      icon: FaGitAlt,
+      description: "Development workflow and delivery.",
+      items: [
+        { name: "Git", icon: FaGitAlt },
+        { name: "GitHub", icon: FaGithub },
+        { name: "NPM", icon: SiNpm },
+        { name: "Postman", icon: SiPostman },
+        { name: "Netlify", icon: SiNetlify },
       ],
     },
-  ],
-  education: [
     {
-      course: "Master of Computer Applications (MCA)",
-      institute: "Shreyarth University",
-      duration: "Jul 2024 - Jul 2026",
-      result: "Postgraduate degree",
-    },
-    {
-      course: "Bachelor of Computer Applications (BCA)",
-      institute: "Lokmanya College of Computer Application, Ahmedabad",
-      duration: "Aug 2021 - Aug 2024",
-      result: "Graduate degree",
-    },
-    {
-      course: "Higher Secondary School (HSC)",
-      institute: "Nutan Prakash Vidhyalaya English Medium",
-      duration: "2018 - 2019",
-      result: "School education",
-    },
-  ],
-  certifications: [
-    {
-      title: "IBM SkillsBuild Project-Based Learning Program",
-      issuer: "IBM SkillsBuild",
+      title: "Databases",
+      icon: FaDatabase,
+      description: "Data modeling and storage.",
+      items: [
+        { name: "MongoDB", icon: SiMongodb },
+        { name: "Mongoose ODM", icon: SiMongoose },
+        { name: "MySQL", icon: SiMysql },
+        { name: "REST APIs", icon: FaServer },
+        { name: "Cloudinary", icon: FaDatabase },
+      ],
     },
   ],
   projects: [
     {
       title: "Hospital Management System",
       description:
-        "A full-stack hospital management system with separate Admin, Doctor, and Patient panels, role-based authentication, appointment workflows, prescriptions, billing, and report handling.",
-      tech: ["React.js", "Vite", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Mongoose", "Cloudinary"],
+        "A full-stack hospital management platform with role-based admin, doctor, and patient panels, appointment workflows, prescriptions, billing, and report handling.",
+      impact: [
+        "Built a multi-role structure for a cleaner real-world workflow.",
+        "Added responsive dashboards and reusable UI patterns.",
+        "Integrated Multer and Cloudinary for medical report uploads.",
+      ],
+      tech: ["React", "Vite", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Cloudinary"],
       github: "https://github.com/bilalkhan-mern/hospital-management-mern",
       live: "https://hospital-management-mern.netlify.app",
+      featured: true,
     },
     {
-      title: "MERN Authentication Application",
+      title: "Ecommerce Website",
       description:
-        "A full-stack MERN authentication application with JWT-based login and registration, protected routes, and MongoDB integration for secure user management.",
+        "A full-stack ecommerce application with user authentication, product management, shopping cart functionality, and responsive product browsing.",
+      impact: [
+        "Built a full MERN workflow for product discovery and checkout readiness.",
+        "Designed responsive product layouts for a cleaner shopping experience.",
+        "Implemented REST APIs for smooth frontend and backend communication.",
+      ],
+      tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+      github: "",
+      live: "",
+      featured: true,
+    },
+    {
+      title: "MERN Authentication App",
+      description:
+        "A secure authentication app with JWT-based signup and login, protected routes, and MongoDB-backed user management.",
+      impact: [
+        "Focused on secure access and cleaner auth flow.",
+        "Used reusable forms and protected UI routes.",
+        "Demonstrates practical backend and frontend integration.",
+      ],
       tech: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
       github: "https://github.com/bilalkhan-mern/mern-auth-app",
       live: "",
+      featured: false,
     },
     {
       title: "React Portfolio",
       description:
-        "A modern portfolio website built with React and Tailwind CSS to showcase projects, skills, resume, and contact details with a clean responsive layout.",
-      tech: ["React.js", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
+        "A responsive portfolio website showcasing skills, projects, resume access, and contact information with a polished UI.",
+      impact: [
+        "Built to be recruiter-friendly and easy to scan.",
+        "Uses clean section flow and modern Tailwind styling.",
+        "Shows my approach to responsive frontend design.",
+      ],
+      tech: ["React", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/bilalkhan-mern/react-portfolio",
       live: "",
-    },
-    {
-      title: "Shreyarth University Website",
-      description:
-        "A responsive university website built with HTML, CSS, JavaScript, and Tailwind CSS, focused on clean layout, modular UI sections, and smooth user experience.",
-      tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
-      github: "",
-      live: "",
+      featured: false,
     },
   ],
-  socialLinks: {
-    github: "https://github.com/bilalkhan-mern",
-    linkedin: "https://www.linkedin.com/in/bilalkhan-pathan-7258a4252",
-    twitter: "",
+  contact: {
+    email: "bilal8511018651@gmail.com",
+    phone: "+91 84878 79887",
+    location: "Ahmedabad, Gujarat",
+    message:
+      "I am open to internships, junior frontend roles, and full-stack opportunities where I can contribute and keep learning.",
+    socials: [
+      { label: "GitHub", href: "https://github.com/bilalkhan-mern", icon: FaGithub },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/bilalkhan-pathan-7258a4252", icon: FaLinkedinIn },
+      { label: "Email", href: "mailto:bilal8511018651@gmail.com", icon: FaEnvelope },
+      { label: "Call", href: "tel:+918487879887", icon: FaPhone },
+    ],
+  },
+  utilities: {
+    arrowRight: FaArrowRight,
+    externalLink: FaArrowUpRightFromSquare,
+    download: FaDownload,
+    envelope: FaEnvelope,
   },
 };
 

@@ -1,94 +1,107 @@
-import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import ResumeSection from "../components/ResumeSection";
-import portfolioData from "../data/portfolioData";
+import { FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
+import Reveal from "../components/Reveal";
 import SectionTitle from "../components/SectionTitle";
+import portfolioData from "../data/portfolioData";
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-6 py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl">
+    <section id="contact" className="scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl">
         <SectionTitle
           eyebrow="Contact"
-          title="Let recruiters reach you easily"
+          title="Direct ways to connect with me."
+          description="A clean contact section with quick access to email, phone, and professional links."
         />
 
-        <div className="mt-12 space-y-8">
-          <ResumeSection />
+        <div className="mt-12 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <Reveal className="rounded-[2rem] border border-white/10 bg-black p-8 text-white shadow-[0_18px_60px_rgba(15,23,42,0.18)] sm:p-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-300">Let&apos;s connect</p>
+            <p className="mt-5 text-lg leading-8 text-slate-300">{portfolioData.contact.message}</p>
 
-          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-3xl bg-slate-900 p-8 text-white shadow-lg">
-              <h3 className="text-2xl font-semibold">Let's connect</h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                I am looking for opportunities where I can contribute, learn, and grow as a React developer.
-              </p>
+            <div className="mt-8 space-y-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <div className="flex items-start gap-3">
+                  <FaEnvelope className="mt-1 text-white" />
+                  <div>
+                    <p className="text-sm text-slate-400">Email</p>
+                    <a href={`mailto:${portfolioData.contact.email}`} className="mt-1 block font-medium text-white">
+                      {portfolioData.contact.email}
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-              <div className="mt-8 space-y-5">
-                <div>
-                  <p className="text-sm text-slate-400">Email</p>
-                  <a href={`mailto:${portfolioData.personal.email}`} className="mt-1 inline-block font-medium text-white">
-                    {portfolioData.personal.email}
-                  </a>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <div className="flex items-start gap-3">
+                  <FaPhone className="mt-1 text-white" />
+                  <div>
+                    <p className="text-sm text-slate-400">Phone</p>
+                    <a href={`tel:${portfolioData.contact.phone.replace(/\s+/g, "")}`} className="mt-1 block font-medium text-white">
+                      {portfolioData.contact.phone}
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-slate-400">Phone</p>
-                  <p className="mt-1 font-medium text-white">{portfolioData.personal.phone}</p>
-                </div>
-                <div>
-                  <p className="text-sm text-slate-400">Location</p>
-                  <p className="mt-1 font-medium text-white">{portfolioData.personal.location}</p>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <div className="flex items-start gap-3">
+                  <FaLocationDot className="mt-1 text-white" />
+                  <div>
+                    <p className="text-sm text-slate-400">Location</p>
+                    <p className="mt-1 font-medium text-white">{portfolioData.contact.location}</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <a
-                href={`mailto:${portfolioData.personal.email}`}
-                className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-              >
-                <FaEnvelope className="text-2xl text-amber-700" />
-                <p className="mt-5 text-lg font-semibold text-slate-900">Email</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{portfolioData.personal.email}</p>
-              </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {portfolioData.contact.socials.map((social) => {
+                const SocialIcon = social.icon;
 
-              <a
-                href={portfolioData.socialLinks.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-              >
-                <FaGithub className="text-2xl text-amber-700" />
-                <p className="mt-5 text-lg font-semibold text-slate-900">GitHub</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">View source code and project repositories.</p>
-              </a>
-
-              <a
-                href={portfolioData.socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-              >
-                <FaLinkedin className="text-2xl text-amber-700" />
-                <p className="mt-5 text-lg font-semibold text-slate-900">LinkedIn</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">Connect with me for professional opportunities.</p>
-              </a>
-
-              {portfolioData.socialLinks.twitter && (
-                <a
-                  href={portfolioData.socialLinks.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-                >
-                  <FaTwitter className="text-2xl text-amber-700" />
-                  <p className="mt-5 text-lg font-semibold text-slate-900">Twitter</p>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">Extra social link for networking and updates.</p>
-                </a>
-              )}
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target={social.label === "Email" || social.label === "Call" ? undefined : "_blank"}
+                    rel={social.label === "Email" || social.label === "Call" ? undefined : "noopener noreferrer"}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10"
+                  >
+                    <SocialIcon className="text-xs text-white" />
+                    {social.label}
+                  </a>
+                );
+              })}
             </div>
-          </div>
+          </Reveal>
+
+          <Reveal delay={120} className="rounded-[2rem] border border-white/10 bg-white p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)] sm:p-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Quick access</p>
+            <div className="mt-6 grid gap-4">
+              <a
+                href={`mailto:${portfolioData.contact.email}`}
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-5 transition hover:border-slate-950 hover:bg-slate-100"
+              >
+                <p className="text-sm font-medium text-slate-500">Email</p>
+                <p className="mt-2 text-lg font-semibold text-slate-950">{portfolioData.contact.email}</p>
+              </a>
+              <a
+                href={`tel:${portfolioData.contact.phone.replace(/\s+/g, "")}`}
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-5 transition hover:border-slate-950 hover:bg-slate-100"
+              >
+                <p className="text-sm font-medium text-slate-500">Phone</p>
+                <p className="mt-2 text-lg font-semibold text-slate-950">{portfolioData.contact.phone}</p>
+              </a>
+              <a
+                href={portfolioData.personal.resumeLink}
+                download
+                className="inline-flex items-center justify-center rounded-3xl bg-slate-950 px-5 py-4 text-sm font-semibold text-white transition hover:bg-slate-800"
+              >
+                Download Resume
+              </a>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
   );
 }
-
