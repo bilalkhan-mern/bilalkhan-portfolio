@@ -1,5 +1,7 @@
 # Bilal Khan Pathan | Portfolio
 
+[Live Site](https://bilalkhan-pathan-portfolio.netlify.app)
+
 Professional React portfolio for Bilal Khan Pathan, a MERN Stack fresher and MCA student. The site highlights the resume-based profile, projects, technical skills, and direct contact links in a clean single-page experience.
 
 ## Overview
@@ -51,6 +53,7 @@ This project can be deployed on Netlify or any static hosting provider.
 
 - Build command: `npm run build`
 - Publish directory: `dist`
+- Live URL: [bilalkhan-pathan-portfolio.netlify.app](https://bilalkhan-pathan-portfolio.netlify.app)
 
 ## Contact
 
